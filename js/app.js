@@ -1,6 +1,6 @@
-window.takke = window.takke || {};
+window.noel = window.noel || {};
 
-takke.App = $.Class.extend({
+noel.App = $.Class.extend({
 
     acceptedTypes: ["image/jpg", "image/jpeg", "image/png", "image/gif"],
 
@@ -12,8 +12,8 @@ takke.App = $.Class.extend({
     init: function (options) {
         $.extend(this, options);
 
-        this.takke = $("<img>", {
-            "src": "img/takke.png"
+        this.noel = $("<img>", {
+            "src": "img/noel.png"
         }).css({"position": "absolute"});
 
         this.loading = $("#loading");
@@ -35,7 +35,7 @@ takke.App = $.Class.extend({
                 ratio = width / this.originalImageSizes.width,
                 height = this.originalImageSizes.height * ratio;
 
-            var cloned = this.takke.clone().css({
+            var cloned = this.noel.clone().css({
                 "margin-left": comp[i].x - ((width - comp[i].width)/2),
                 "margin-top": comp[i].y - (height / 1.2),
                 "width": width,
